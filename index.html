@@ -1,211 +1,417 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 
+
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Диплом</title>
+
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+
   <link rel="stylesheet" href="css/font-awesome.min.css">
+
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
   <script src="js/script.js" defer></script>
+
 </head>
 
+
+
 <body>
+
   <header class="header">
+
     <div class="container flex-wrapper">
+
       <button class="header__toggle toggle" aria-label="Открыть меню">
+
         <span class="toggle__line toggle__line--first"></span>
+
         <span class="toggle__line toggle__line--second"></span>
+
         <span class="toggle__line toggle__line--third"></span>
+
         <span class="toggle__line toggle__line--fourth"></span>
+
       </button>
+
       <nav class="header__menu menu">
 
+
+
         <ul class="menu__list">
+
           <li class="menu__item"><a class="menu__link" href="#">Услуги</a></li>
+
           <li class="menu__item"><a class="menu__link" href="#">Портфолио</a></li>
+
           <li class="menu__item"><a class="menu__link" href="#">Стоимость</a></li>
+
         </ul>
+
       </nav>
+
       <div class="header__contacts">
+
         <a class="header__phone" href="tel:+74999955577">+7 (499) 995-55-77</a>
+
         <button class="open__first-modal call-button call-button--icon" href="+74999955577"><i class="fa fa-phone"
             aria-hidden="true"></i><span class="call-button--none">Заказать
+
             звонок</span></button>
 
+
+
       </div>
-      <div class="first__modal">
-        <div class="modal__content">
-          <span class="close">&times;</span>
-          <form action="mailto:kaes_vorelay@icloud.com">
-            <p class="form-tittle">Имя, фамилия</p>
-            <input type="text">
-            <p class="form-tittle">Номер телефона</p>
-            <input type="tel">
-            <input class="call-button submit" type="submit" value="Отправить">
-          </form>
-        </div>
-      </div>
-      <div class="second__modal">
-        <div class="modal__content">
-          <span class="close">&times;</span>
-          <form action="mailto:kaes_vorelay@icloud.com">
-            <p class="form-tittle">Имя, фамилия</p>
-            <input type="text">
-            <p class="form-tittle">Номер телефона</p>
-            <input type="tel">
-            <p class="form-tittle">e-mail</p>
-            <input type="email">
-            <input class="call-button submit" type="submit" value="Отправить">
-          </form>
-        </div>
-      </div>
+
+
+
+
+
     </div>
+
   </header>
+
   <main>
+
+
 
     <!-- Верстаем секцию с фото челоека -->
 
+
+
     <section class="first-screen">
+
       <div class="container">
+
         <div class="photo-wrapper first-screen__wrapper">
+
           <img class="photo-wrapper__man" src="img/man-photo.png" alt="unlnow">
+
         </div>
+
         <div class="first-screen__left">
+
           <h1 class="first-screen__name">Дмитрий&nbsp;Алексеев</h1>
+
           <p class="first-screen__specialty">Frontend-разработчик и веб-верстальщик</p>
+
           <button class="open-second__modal button first-screen__button">Узнать больше</button>
+
         </div>
+
         <div class="elements">
+
           <span class="elements__item elements__item-1">&lt;div&gt;</span>
+
           <span class="elements__item elements__item-2">&lt;div&gt;</span>
+
           <span class="elements__item elements__item-3">&lt;/&gt;</span>
+
           <span class="elements__item elements__item-4">{ }</span>
+
           <span class="elements__item elements__item-5">#</span>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- Верстаем секцию услуг -->
 
+
+
     <section class="second-screen">
+
       <div class="container second-screen__container ">
+
         <h2 class="screen-tittle">Что я делаю</h2>
+
         <div class="second-screen__abylity">
 
+
+
           <p class="abylity__image abylity__image--siat">Вёрстка лендинг–&nbsp;страниц
+
             и сайтов любой сложности</p>
 
 
+
+
+
           <p class="abylity__image abylity__image--adaptive">Адаптивная вёрстка под все
+
             браузеры и устройства</p>
+
+
+
 
 
           <p class="abylity__image abylity__image--developers">Адаптивная вёрстка под все
+
             браузеры и устройства</p>
 
 
+
+
+
           <p class="abylity__image abylity__image--correction">Исправление и доработка
+
             существующей вёрстки</p>
 
+
+
         </div>
+
         <button class="second-screen__button open-second__modal button">Узнать стоимость</button>
+
       </div>
+
     </section>
+
+
 
     <!-- Верстаем примеры работы -->
 
+
+
     <section class="third-screen">
+
       <div class="container">
+
         <h2 class="screen-tittle">Примеры моих работы</h2>
+
         <div class="third-screen__slider slider slide__container">
+
           <ul class="slider__list">
+
             <li class="slider__item"><img src="img/vera-sait.png" alt="unknow">
+
               <p class="slider__text">Сайт психолога Веры Антоновой</p>
+
             </li>
+
             <li class="slider__item"><img src="img/children-toy.png" alt="unknow">
+
               <p class="slider__text">Сайт магазина детской одежды</p>
+
             </li>
+
             <li class="slider__item"><img src="img/fishin-sait.png" alt="unknow">
+
               <p class="slider__text">Сайт магазина «Рыболов»</p>
+
             </li>
+
           </ul>
+
         </div>
+
         <button class="slider__button slider__button--prev" aria-label="Предыдущий слайд"></button>
+
         <button class="slider__button slider__button--next" aria-label="Следующий слайд"></button>
+
         <div class="slider__pagination paginator" aria-hidden="true"></div>
+
         <button class="third-screen__button button open__first-modal">Заказать проект</button>
+
       </div>
+
     </section>
+
+
 
     <!-- Верстаем красочный блок  -->
 
+
+
     <section class="fourth-screen">
+
       <div class="fourth-screen__container">
+
         <div class="elements elements--index">
+
           <span class="elements__item elements__item-6">&lt;div&gt;</span>
+
           <span class="elements__item elements__item-7">{ }</span>
+
           <span class="elements__item elements__item-8">&lt;/&gt;</span>
+
           <span class="elements__item elements__item-9">{ }</span>
+
           <span class="elements__item elements__item-10">#</span>
+
         </div>
+
         <p class="fourrth-screen__service">
+
           Адаптивная вёрстка под все устройства и браузеры от 1000 рублей
+
           всего за&nbsp;4&nbsp;часа.*
+
         </p>
+
         <p class="fourrth-screen__footnote">
+
           * Срок и стоимость могут отличаться от заявленных и рассчитываются
+
           индивидуально, в зависимости от сложности задач.
+
         </p>
+
       </div>
+
     </section>
+
+
+
+
+
 
 
 
 
   </main>
+
   <!-- Начинаем верстать футер -->
 
+
+
   <footer class="footer">
+
     <div class="container flex-container">
 
+
+
       <ul class="footer-menu">
+
         <li class="footer-menu__item"><a class="footer-menu__link" href="#">Услуги</a></li>
+
         <li class="footer-menu__item"><a class="footer-menu__link" href="#">Портфолио</a></li>
+
         <li class="footer-menu__item"><a class="footer-menu__link" href="#">Стоимость</a></li>
+
       </ul>
+
+
 
       <div class="footer__contact contacts">
 
+
+
         <a href="tel:+7 (499) 995-77-55" class="contacts__link"><i class="fa fa-phone position"
             aria-hidden="true"></i>+7 (499)
+
           995-77-55</a>
+
         <a href="mailto: dmitry@alekseev.com" class="contacts__link"><i class="fa fa-envelope position"
             aria-hidden="true"></i>dmitry@alekseev.com</a>
+
       </div>
 
+
+
       <div class="footer__item-network">
+
         <button class="footer__button call-button open-second__modal">Заказать звонок</button>
+
         <ul class="footer__social-network social-network">
+
           <li class="social-network__item"><a class="social-network__link social-network__link--vk"
               href="https://vk.com/" target="_blank"></a>
+
           </li>
+
           <li class="social-network__item"><a class="social-network__link social-network__link--facebook"
               href="https://www.facebook.com/" target="_blank"></a></li>
+
           <li class="social-network__item"><a class="social-network__link social-network__link--twitter"
               href="https://twitter.com/" target="_blank"></a></li>
+
           <li class="social-network__item"><a class="social-network__link social-network__link--instagram"
               href="https://www.instagram.com/" target="_blank"></a></li>
+
         </ul>
+
       </div>
+
     </div>
+
+
 
     <p class="footer__copyright">© Дмитрий Алексеев, 2016 – 2018</p>
 
 
+
+
+
   </footer>
+  <div class="first-modal">
+
+    <div class="modal__content">
+
+      <button class="close">&times;</button>
+
+      <form action="mailto:kaes_vorelay@icloud.com">
+
+        <p class="form-tittle"><label for="input-text">Имя, фамилия</label></p>
+
+        <input type="text" id="input-text">
+
+        <p class="form-tittle"><label for="input-tel">Номер телефона</label></p>
+
+        <input type="tel" id="input-tel">
+
+        <input class="call-button submit" type="submit" value="Отправить">
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+  <div class="second-modal">
+
+    <div class="modal__content">
+
+      <button class="close">&times;</button>
+
+      <form action="mailto:kaes_vorelay@icloud.com">
+
+        <p class="form-tittle"><label for="input-text-2">Имя, фамилия</label></p>
+
+        <input type="text" id="input-text-2">
+
+        <p class="form-tittle"><label for="input-tel-2">Номер телефона</label></p>
+
+        <input type="tel" id="input-tel-2">
+
+        <p class="form-tittle"><label for="input-email">e-mail</label></p>
+
+        <input type="email" id="input-email">
+
+        <input class="call-button submit" type="submit" value="Отправить">
+
+      </form>
+
+    </div>
+
+  </div>
 </body>
+
+
+
 
 
 </html>
