@@ -9,10 +9,10 @@
 
   src:
 
-    /* IE6-IE8 */ url("../fonts/roboto-v20-latin_cyrillic-regular.woff2")
-      format("woff2"),
+    /* IE6-IE8 */
+    url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"),
     /* Super Modern Browsers */
-      url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
+    url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
 }
 
 /* roboto-500 - latin_cyrillic */
@@ -26,10 +26,10 @@
 
   src:
 
-    /* IE6-IE8 */ url("../fonts/roboto-v20-latin_cyrillic-500.woff2")
-      format("woff2"),
+    /* IE6-IE8 */
+    url("../fonts/roboto-v20-latin_cyrillic-500.woff2") format("woff2"),
     /* Super Modern Browsers */
-      url("../fonts/roboto-v20-latin_cyrillic-500.woff") format("woff");
+    url("../fonts/roboto-v20-latin_cyrillic-500.woff") format("woff");
 }
 
 /* roboto-700 - latin_cyrillic */
@@ -43,10 +43,10 @@
 
   src:
 
-    /* IE6-IE8 */ url("../fonts/roboto-v20-latin_cyrillic-700.woff2")
-      format("woff2"),
+    /* IE6-IE8 */
+    url("../fonts/roboto-v20-latin_cyrillic-700.woff2") format("woff2"),
     /* Super Modern Browsers */
-      url("../fonts/roboto-v20-latin_cyrillic-700.woff") format("woff");
+    url("../fonts/roboto-v20-latin_cyrillic-700.woff") format("woff");
 
   /* Legacy iOS */
 }
@@ -223,7 +223,7 @@ html {
 
   width: 100%;
 
-  left: 0px;
+  left: 0;
 
   z-index: 10;
 
@@ -317,7 +317,6 @@ html {
 
   width: 300px;
 
-  height: 400px;
 
   border-radius: 20px;
 
@@ -345,6 +344,7 @@ form {
 }
 
 .form-tittle {
+  display: block;
   font-size: 12px;
 
   color: rgba(0, 0, 0, 0.5);
@@ -352,7 +352,7 @@ form {
   margin: 10px 0;
 }
 
-form input {
+.input {
   display: block;
 
   padding: 5px;
@@ -366,8 +366,10 @@ form input {
   font-size: 18px;
 }
 
+
 .submit {
-  margin: 30px auto;
+  display: block;
+  margin: 20px auto auto;
 }
 
 .call-button {
@@ -651,9 +653,9 @@ form input {
 .elements {
   position: absolute;
 
-  left: 0%;
+  left: 0;
 
-  top: 0%;
+  top: 0;
 
   width: 100%;
 
@@ -919,9 +921,8 @@ form input {
 .third-screen__slider {
   position: relative;
 
-  margin: 0 auto;
+  margin: 100px 0 auto;
 
-  margin-top: 100px;
 }
 
 .slider {
@@ -999,7 +1000,6 @@ form input {
 
   background-position: center;
 
-  border-color: transparent;
 
   outline: none;
 }
@@ -1124,7 +1124,6 @@ form input {
 .fourrth-screen__footnote {
   margin-top: 45px;
 
-  opacity: 0.5;
 
   font-size: 20px;
 

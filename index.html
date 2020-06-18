@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
   <script src="js/script.js" defer></script>
 
 </head>
@@ -362,15 +363,17 @@
 
       <button class="close">&times;</button>
 
-      <form action="mailto:kaes_vorelay@icloud.com">
+      <form>
+        <input type="hidden" name="admin_email[]" value="kaes_vorelay@icloud.com">
+        <input type="hidden" name="form_subject" value="Заявка">
 
-        <p class="form-tittle"><label for="input-text">Имя, фамилия</label></p>
+        <label class="form-tittle" for="input-text">Имя, фамилия</label>
 
-        <input type="text" id="input-text">
+        <input class="input" type="text" name="fio" data-validate-filed="fio" id="input-text">
 
-        <p class="form-tittle"><label for="input-tel">Номер телефона</label></p>
+        <label class="form-tittle" for="input-tel">Номер телефона</label>
 
-        <input type="tel" id="input-tel">
+        <input class="input" type="tel" name="tel" data-validate-filed="tel" id="input-tel">
 
         <input class="call-button submit" type="submit" value="Отправить">
 
@@ -387,19 +390,21 @@
 
       <button class="close">&times;</button>
 
-      <form action="mailto:kaes_vorelay@icloud.com">
+      <form>
+        <input type="hidden" name="admin_email[]" value="kaes_vorelay@icloud.com">
+        <input type="hidden" name="form_subject" value="Заявка">
 
-        <p class="form-tittle"><label for="input-text-2">Имя, фамилия</label></p>
+        <label class="form-tittle" for="input-text-2">Имя, фамилия</label>
 
-        <input type="text" id="input-text-2">
+        <input class="input" type="text" name="fio" data-validate-filed="fio" id="input-text-2">
 
         <p class="form-tittle"><label for="input-tel-2">Номер телефона</label></p>
 
-        <input type="tel" id="input-tel-2">
+        <input class="input" type="tel" name="tel" data-validate-filed="tel" id="input-tel-2">
 
-        <p class="form-tittle"><label for="input-email">e-mail</label></p>
+        <label class="form-tittle" for="input-email">e-mail</label>
 
-        <input type="email" id="input-email">
+        <input class="input" type="email" name="email" data-validate-filed="email" id="input-email">
 
         <input class="call-button submit" type="submit" value="Отправить">
 
