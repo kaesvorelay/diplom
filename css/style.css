@@ -205,6 +205,14 @@ html {
   font-size: 25px;
   color: #000;
   margin-right: 30px;
+  transition: background-color 0.15s, color 0.15s;
+  outline: none;
+}
+
+.header__phone:hover,
+.header__phone:focus {
+  text-decoration: underline;
+  color: #fc557c;
 }
 
 .first-modal {
@@ -1007,6 +1015,7 @@ form {
   font-size: 18px;
   color: rgba(137, 147, 173, 255);
   outline: none;
+  transition: background-color 0.15s, color 0.15s;
 }
 
 .footer-menu__item {
@@ -1016,13 +1025,14 @@ form {
 .footer-menu__item:not(:last-child) {
   display: block;
   margin-bottom: 16px;
+
+
 }
 
 .footer-menu__link:hover,
 .footer-menu__link:focus {
   text-decoration: underline;
   color: #fc557c;
-  transition: background-color 0.15s, color 0.15s;
 }
 
 .contacts__link {
@@ -1031,6 +1041,8 @@ form {
   text-decoration: none;
   color: #000;
   font-size: 25px;
+  transition: background-color 0.35s, color 0.35s;
+  outline: none;
 }
 
 .contacts__link:not(:last-child) {
@@ -1041,7 +1053,6 @@ form {
 .contacts__link:focus {
   text-decoration: underline;
   color: #fc557c;
-  transition: background-color 0.15s, color 0.15s;
 }
 
 .position {
@@ -1084,6 +1095,8 @@ form {
 
 .social-network__item {
   list-style-type: none;
+  transition: background-color 0.35s, color 0.35s;
+
 }
 
 .social-network__item:hover,
