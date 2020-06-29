@@ -96,62 +96,73 @@ let input = document.querySelectorAll(`input[type = "tel"]`);
 let im = new Inputmask("+7 (999) 999-99-99");
 im.mask(input);
 
-// let popupWrapperFirst = document.querySelector('.first-modal');
-// let popup = popupWrapperFirst.querySelector('.modal__content');
-// let popupForm = popup.querySelector('.modal__form');
-// let popupMessege = popup.querySelector('.modal__thanks');
+let popupWrapperFirst = document.querySelector(".first-modal");
+let popup = popupWrapperFirst.querySelector(".modal__content");
+let popupForm = popup.querySelector(".modal__form");
+let popupMessege = popup.querySelector(".modal__thanks");
 
-// const showMessage = () => {
-//     popupMessege.classList.add('modal__thanks--active');
-//     popupForm.classList.add('modal__form--hide');
-// }
+const showMessage = () => {
+  popupMessege.classList.add("modal__thanks--active");
+  // popupForm.classList.add("modal__form--hide");
+};
 
-// popupForm.addEventListener('submit', (evt) => {
-//     // отменяем отправку
-//     evt.preventDefault();
+popupForm.addEventListener("submit", (evt) => {
+  // отменяем отправку
+  evt.preventDefault();
 
-//     showMessage();
-// })
+  showMessage();
+});
 
-// let popupWrapperSecond = document.querySelector('.second-modal');
-// let popupSecond = popupWrapperSecond.querySelector(".modal__content");
-// let popupFormSecond = popupSecond.querySelector('.modal__form');
-// let popupMessegeSecond = popupSecond.querySelector('.modal__thanks')
+let popupWrapperSecond = document.querySelector(".second-modal");
+let popupSecond = popupWrapperSecond.querySelector(".modal__content");
+let popupFormSecond = popupSecond.querySelector(".modal__form");
+let popupMessegeSecond = popupSecond.querySelector(".modal__thanks");
 
-// const showMessageSecond = () => {
-//     popupMessegeSecond.classList.add('modal__thanks--active');
-//     popupFormSecond.classList.add('modal__form--hide');
+const showMessageSecond = () => {
+  popupMessegeSecond.classList.add("modal__thanks--active");
+  // popupFormSecond.classList.add("modal__form--hide");
+};
 
-// }
+popupFormSecond.addEventListener("submit", (evt) => {
+  // отменяем отправку
+  evt.preventDefault();
 
-// popupFormSecond.addEventListener('submit', (evt) => {
-//     // отменяем отправку
-//     evt.preventDefault();
-
-//     showMessageSecond();
-// })
+  showMessageSecond();
+});
 
 function validateForms(selector, rules) {
   new window.JustValidate(selector, {
     rules: rules,
     submitHandler: function (form, values, ajax) {
       console.log(form);
-      // let formData = new FormData(form);
+      let formData = new FormData(form);
 
-      // fetch("mail.php", {
-      //     method: "POST",
-      //     body: formData
-      // })
-      // .then(function(data) {
-      //     console.log(data);
-      //     console.log('Отправлено');
-      //     form.reset();
-      // });
+      fetch("mail.php", {
+        method: "POST",
+        body: formData,
+      }).then(function (data) {
+        console.log(data);
+        console.log("Отправлено");
+        form.reset();
+      });
     },
   });
 }
 
-validateForms(".modal__form-1", {
+validateForms(".modal__form", {
+  email: {
+    required: true,
+    email: true,
+  },
+  fio: {
+    required: true,
+  },
+  tel: {
+    required: true,
+  },
+});
+
+validateForms(".modal__form-2", {
   email: {
     required: true,
     email: true,
