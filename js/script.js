@@ -149,28 +149,45 @@ function validateForms(selector, rules) {
   });
 }
 
-validateForms(".modal__form", {
-  email: {
-    required: true,
-    email: true,
-  },
-  fio: {
-    required: true,
-  },
-  tel: {
-    required: true,
-  },
-});
+// validateForms(".modal__form", {
+//   email: {
+//     required: true,
+//     email: true,
+//   },
+//   fio: {
+//     required: true,
+//   },
+//   tel: {
+//     required: true,
+//   },
+// });
 
-validateForms(".modal__form-2", {
-  email: {
-    required: true,
-    email: true,
-  },
-  fio: {
-    required: true,
-  },
-  tel: {
-    required: true,
-  },
-});
+// validateForms(".modal__form-2", {
+//   email: {
+//     required: true,
+//     email: true,
+//   },
+//   fio: {
+//     required: true,
+//   },
+//   tel: {
+//     required: true,
+//   },
+// });
+
+if (
+  validateForms(".modal__form", {
+    email: {
+      required: true,
+      email: true,
+    },
+    fio: {
+      required: true,
+    },
+    tel: {
+      required: true,
+    },
+  }) == true) {
+  showMessageSecond();
+}
+
