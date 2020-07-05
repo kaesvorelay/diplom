@@ -103,15 +103,10 @@ let popupMessege = popup.querySelector(".modal__thanks");
 
 const showMessage = () => {
   popupMessege.classList.add("modal__thanks--active");
-  // popupForm.classList.add("modal__form--hide");
+  popupForm.classList.add("modal__form--hide");
 };
 
-popupForm.addEventListener("submit", (evt) => {
-  // отменяем отправку
-  evt.preventDefault();
 
-  showMessage();
-});
 
 let popupWrapperSecond = document.querySelector(".second-modal");
 let popupSecond = popupWrapperSecond.querySelector(".modal__content");
@@ -120,20 +115,17 @@ let popupMessegeSecond = popupSecond.querySelector(".modal__thanks");
 
 const showMessageSecond = () => {
   popupMessegeSecond.classList.add("modal__thanks--active");
-  // popupFormSecond.classList.add("modal__form--hide");
+  popupFormSecond.classList.add("modal__form--hide");
 };
 
-popupFormSecond.addEventListener("submit", (evt) => {
-  // отменяем отправку
-  evt.preventDefault();
 
-  showMessageSecond();
-});
 
 function validateForms(selector, rules) {
   new window.JustValidate(selector, {
     rules: rules,
     submitHandler: function (form, values, ajax) {
+      showMessage();
+      showMessageSecond();
       console.log(form);
       let formData = new FormData(form);
 
@@ -149,45 +141,28 @@ function validateForms(selector, rules) {
   });
 }
 
-// validateForms(".modal__form", {
-//   email: {
-//     required: true,
-//     email: true,
-//   },
-//   fio: {
-//     required: true,
-//   },
-//   tel: {
-//     required: true,
-//   },
-// });
+validateForms(".modal__form", {
+  email: {
+    required: true,
+    email: true,
+  },
+  fio: {
+    required: true,
+  },
+  tel: {
+    required: true,
+  },
+});
 
-// validateForms(".modal__form-2", {
-//   email: {
-//     required: true,
-//     email: true,
-//   },
-//   fio: {
-//     required: true,
-//   },
-//   tel: {
-//     required: true,
-//   },
-// });
-
-if (
-  validateForms(".modal__form", {
-    email: {
-      required: true,
-      email: true,
-    },
-    fio: {
-      required: true,
-    },
-    tel: {
-      required: true,
-    },
-  }) == true) {
-  showMessageSecond();
-}
-
+validateForms(".modal__form-2", {
+  email: {
+    required: true,
+    email: true,
+  },
+  fio: {
+    required: true,
+  },
+  tel: {
+    required: true,
+  },
+});
