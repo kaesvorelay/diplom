@@ -122,6 +122,9 @@ const showMessageSecond = () => {
 
 function validateForms(selector, rules) {
   new window.JustValidate(selector, {
+    Messages: {
+      required: 'Ошибка',
+    },
     rules: rules,
     submitHandler: function (form, values, ajax) {
       showMessage();
@@ -141,7 +144,10 @@ function validateForms(selector, rules) {
   });
 }
 
+
+
 validateForms(".modal__form", {
+
   email: {
     required: true,
     email: true,
@@ -155,6 +161,7 @@ validateForms(".modal__form", {
 });
 
 validateForms(".modal__form-2", {
+
   email: {
     required: true,
     email: true,
