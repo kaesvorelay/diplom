@@ -122,8 +122,16 @@ const showMessageSecond = () => {
 
 function validateForms(selector, rules) {
   new window.JustValidate(selector, {
-    Messages: {
-      required: 'Ошибка',
+    messages: {
+      tel: {
+        required: 'Введите номер телефона',
+      },
+      fio: {
+        required: 'Введите Фамилию и Имя',
+      },
+      email: {
+        required: 'Введите email',
+      }
     },
     rules: rules,
     submitHandler: function (form, values, ajax) {
